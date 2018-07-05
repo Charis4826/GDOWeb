@@ -4,8 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.ie.InternetExplorerOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -34,12 +34,9 @@ public class NewTest {
   @BeforeTest
   public void beforeTest() {
 	  capabilities = DesiredCapabilities.chrome();
-      capabilities.setBrowserName("chrome");
-      System.setProperty("webdriver.chrome.driver", getClass().getResource("/IEDriverServer.exe").getPath());
-      ChromeOptions options = new ChromeOptions();
-      options.addArguments("--start-maximized");
-      capabilities.setCapability(ChromeOptions.CAPABILITY, options);
-      driver = new ChromeDriver(capabilities);
+      capabilities.setBrowserName("ie");
+      System.setProperty("webdriver.ie.driver", getClass().getResource("/IEDriverServer.exe").getPath());
+      driver = new InternetExplorerDriver(capabilities);
       driver.manage().window().maximize();
   }
 

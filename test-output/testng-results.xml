@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="13538" started-at="2018-07-05T07:16:06Z" finished-at="2018-07-05T07:16:19Z">
+  <suite name="Suite" duration-ms="17706" started-at="2018-07-09T07:40:27Z" finished-at="2018-07-09T07:40:45Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="13538" started-at="2018-07-05T07:16:06Z" finished-at="2018-07-05T07:16:19Z">
+    <test name="Test" duration-ms="17706" started-at="2018-07-09T07:40:27Z" finished-at="2018-07-09T07:40:45Z">
       <class name="herbalife.testcase.code.NewTest">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:herbalife.testcase.code.NewTest@1794d431]" name="beforeTest" is-config="true" duration-ms="3455" started-at="2018-07-05T15:16:06Z" finished-at="2018-07-05T15:16:09Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:herbalife.testcase.code.NewTest@1794d431]" name="beforeTest" is-config="true" duration-ms="4682" started-at="2018-07-09T15:40:27Z" finished-at="2018-07-09T15:40:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="open()[pri:0, instance:herbalife.testcase.code.NewTest@1794d431]" name="open" duration-ms="4258" started-at="2018-07-05T15:16:09Z" finished-at="2018-07-05T15:16:14Z">
+        <test-method status="PASS" signature="open()[pri:0, instance:herbalife.testcase.code.NewTest@1794d431]" name="open" duration-ms="6807" started-at="2018-07-09T15:40:32Z" finished-at="2018-07-09T15:40:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- open -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:herbalife.testcase.code.NewTest@1794d431]" name="afterTest" is-config="true" duration-ms="5809" started-at="2018-07-05T15:16:14Z" finished-at="2018-07-05T15:16:19Z">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:herbalife.testcase.code.NewTest@1794d431]" name="afterTest" is-config="true" duration-ms="6205" started-at="2018-07-09T15:40:39Z" finished-at="2018-07-09T15:40:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->

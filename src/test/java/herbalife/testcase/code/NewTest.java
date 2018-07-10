@@ -35,8 +35,12 @@ public class NewTest {
   public void beforeTest() {
 	  capabilities = DesiredCapabilities.chrome();
       capabilities.setBrowserName("ie");
+      
+      
       //System.setProperty("webdriver.ie.driver", getClass().getResource("/IEDriverServer.exe").getPath());
-      System.setProperty("webdriver.ie.driver", "F:\\herbalife\\GDOWeb\\src\\main\\resources\\IEDriverServer.exe");
+      System.setProperty("webdriver.ie.driver", getClass().getResource("/IEDriverServer.exe").getFile());
+      System.out.println(getClass().getResource("/IEDriverServer.exe").getFile());
+      //System.setProperty("webdriver.ie.driver", "F:\\herbalife\\GDOWeb\\src\\main\\resources\\IEDriverServer.exe");
       driver = new InternetExplorerDriver(capabilities);
       driver.manage().window().maximize();
   }

@@ -1,5 +1,9 @@
 package herbalife.testcase.code;
 
+import java.io.File;
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
@@ -32,20 +36,20 @@ public class NewTest {
       driver.findElement(searchButton).click();
   }
   @BeforeTest
-  public void beforeTest() {
+  public void beforeTest() throws Exception {
 	  capabilities = DesiredCapabilities.chrome();
       capabilities.setBrowserName("ie");
       
       
-      //System.setProperty("webdriver.ie.driver", getClass().getResource("/IEDriverServer.exe").getPath());
-      System.setProperty("webdriver.ie.driver", getClass().getResource("/IEDriverServer.exe").getFile());
+      System.setProperty("webdriver.ie.driver", getClass().getResource("/IEDriverServer.exe").toURI().getPath());
+      
       System.out.println(getClass().getResource("/IEDriverServer.exe").getFile());
       //System.setProperty("webdriver.ie.driver", "F:\\herbalife\\GDOWeb\\src\\main\\resources\\IEDriverServer.exe");
       driver = new InternetExplorerDriver(capabilities);
       driver.manage().window().maximize();
   }
 
-  @AfterTest
+@AfterTest
   public void afterTest() {
 	  try {
           //等待5秒查看执行效果

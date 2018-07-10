@@ -1,4 +1,4 @@
-ï»¿package herbalife.testcase.code;
+package herbalife.testcase.code;
 
 import java.io.File;
 import java.io.UnsupportedEncodingException;
@@ -28,11 +28,11 @@ public class NewTest {
       System.out.println("heloo");
       By inputBox = By.id("kw");
       By searchButton = By.id("su");
-      //æ™ºèƒ½ç­‰å¾…å…ƒç´ åŠ è½½å‡ºæ¥
+      //ÖÇÄÜµÈ´ıÔªËØ¼ÓÔØ³öÀ´
       intelligentWait(driver, 10, inputBox);
-      //æ™ºèƒ½ç­‰å¾…å…ƒç´ åŠ è½½å‡ºæ¥
+      //ÖÇÄÜµÈ´ıÔªËØ¼ÓÔØ³öÀ´
       intelligentWait(driver, 10, searchButton);
-      driver.findElement(inputBox).sendKeys("ä¸­å›½åœ°å›¾");
+      driver.findElement(inputBox).sendKeys("ÖĞ¹úµØÍ¼");
       driver.findElement(searchButton).click();
   }
   @BeforeTest
@@ -52,7 +52,7 @@ public class NewTest {
 @AfterTest
   public void afterTest() {
 	  try {
-          //ç­‰å¾…5ç§’æŸ¥çœ‹æ‰§è¡Œæ•ˆæœ
+          //µÈ´ı5Ãë²é¿´Ö´ĞĞĞ§¹û
           Thread.sleep(5000);
       } catch (InterruptedException e) {
           e.printStackTrace();
@@ -60,7 +60,7 @@ public class NewTest {
       driver.quit();
   }
   
-  /**è¿™æ˜¯æ™ºèƒ½ç­‰å¾…å…ƒç´ åŠ è½½çš„æ–¹æ³•*/
+  /**ÕâÊÇÖÇÄÜµÈ´ıÔªËØ¼ÓÔØµÄ·½·¨*/
   public void intelligentWait(WebDriver driver,int timeOut, final By by) {
       try {
           (new WebDriverWait(driver, timeOut)).until(new ExpectedCondition<Boolean>(){
@@ -70,7 +70,7 @@ public class NewTest {
               }
           });
       } catch (TimeoutException e) {
-          Assert.fail("è¶…æ—¶L !! " + timeOut + " ç§’ä¹‹åè¿˜æ²¡æ‰¾åˆ°å…ƒç´  [" + by + "]", e);
+          Assert.fail("³¬Ê±L !! " + timeOut + " ÃëÖ®ºó»¹Ã»ÕÒµ½ÔªËØ [" + by + "]", e);
       }
   }
 

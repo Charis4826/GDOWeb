@@ -1,4 +1,4 @@
-package herbalife.testcase.code;
+ï»¿package herbalife.testcase.code;
 
 import java.io.File;
 import java.io.UnsupportedEncodingException;
@@ -28,11 +28,11 @@ public class NewTest {
       System.out.println("heloo");
       By inputBox = By.id("kw");
       By searchButton = By.id("su");
-      //ÖÇÄÜµÈ´ıÔªËØ¼ÓÔØ³öÀ´
+      //æ™ºèƒ½ç­‰å¾…å…ƒç´ åŠ è½½å‡ºæ¥
       intelligentWait(driver, 10, inputBox);
-      //ÖÇÄÜµÈ´ıÔªËØ¼ÓÔØ³öÀ´
+      //æ™ºèƒ½ç­‰å¾…å…ƒç´ åŠ è½½å‡ºæ¥
       intelligentWait(driver, 10, searchButton);
-      driver.findElement(inputBox).sendKeys("ÖĞ¹úµØÍ¼");
+      driver.findElement(inputBox).sendKeys("ä¸­å›½åœ°å›¾");
       driver.findElement(searchButton).click();
   }
   @BeforeTest
@@ -43,7 +43,7 @@ public class NewTest {
       
       System.setProperty("webdriver.ie.driver", getClass().getResource("/IEDriverServer.exe").toURI().getPath());
       
-      System.out.println(getClass().getResource("/IEDriverServer.exe").getFile());
+      System.out.println(getClass().getResource("/IEDriverServer.exe").toURI().getPath());
       //System.setProperty("webdriver.ie.driver", "F:\\herbalife\\GDOWeb\\src\\main\\resources\\IEDriverServer.exe");
       driver = new InternetExplorerDriver(capabilities);
       driver.manage().window().maximize();
@@ -52,7 +52,7 @@ public class NewTest {
 @AfterTest
   public void afterTest() {
 	  try {
-          //µÈ´ı5Ãë²é¿´Ö´ĞĞĞ§¹û
+          //ç­‰å¾…5ç§’æŸ¥çœ‹æ‰§è¡Œæ•ˆæœ
           Thread.sleep(5000);
       } catch (InterruptedException e) {
           e.printStackTrace();
@@ -60,7 +60,7 @@ public class NewTest {
       driver.quit();
   }
   
-  /**ÕâÊÇÖÇÄÜµÈ´ıÔªËØ¼ÓÔØµÄ·½·¨*/
+  /**è¿™æ˜¯æ™ºèƒ½ç­‰å¾…å…ƒç´ åŠ è½½çš„æ–¹æ³•*/
   public void intelligentWait(WebDriver driver,int timeOut, final By by) {
       try {
           (new WebDriverWait(driver, timeOut)).until(new ExpectedCondition<Boolean>(){
@@ -70,7 +70,7 @@ public class NewTest {
               }
           });
       } catch (TimeoutException e) {
-          Assert.fail("³¬Ê±L !! " + timeOut + " ÃëÖ®ºó»¹Ã»ÕÒµ½ÔªËØ [" + by + "]", e);
+          Assert.fail("è¶…æ—¶L !! " + timeOut + " ç§’ä¹‹åè¿˜æ²¡æ‰¾åˆ°å…ƒç´  [" + by + "]", e);
       }
   }
 

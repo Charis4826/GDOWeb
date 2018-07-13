@@ -24,12 +24,12 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.AfterTest;
 
-public class NewTest {
+public class Try {
 	 WebDriver driver;
 	 DesiredCapabilities capabilities;
 	 
 	 @BeforeTest
-	 @Parameters({ "parameter"})
+	 @Parameters({ "para"})
 	  public void beforeTest(String dbconfig) throws Exception {
 		 Properties prop = new Properties();
 		 prop.load(new FileInputStream(dbconfig));  

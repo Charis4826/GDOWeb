@@ -2,14 +2,14 @@
 <suite name="Suite" parallel="false">
 
     <test name="startbyIE">
-    	<parameter name="parameter" value="parameter_IE.properties" />
+    	<parameter name="para" value="parameter_IE.properties" />
         <classes>
             <class name="herbalife.testcase.code.NewTest"/>
         </classes>
     </test>
 
    <test name="startbyChrome">
-    	<parameter name="parameter" value="parameter_chrome.properties" />
+    	<parameter name="para" value="parameter_chrome.properties" />
     
         <classes>
             <class name="herbalife.testcase.code.NewTest"/>
@@ -17,7 +17,7 @@
     </test>
     
     <test name="startbyFirefox">
-    	<parameter name="parameter" value="parameter_firefox.properties" />
+    	<parameter name="para" value="parameter_firefox.properties" />
     
         <classes>
             <class name="herbalife.testcase.code.NewTest"/>

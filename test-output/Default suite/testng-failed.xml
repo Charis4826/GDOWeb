@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="herbalife.testcase.code.NewTest">
+      <class name="herbalife.testcase.code.NewTest_chrome">
         <methods>
+          <include name="testClass"/>
           <include name="beforeTest"/>
-          <include name="open"/>
         </methods>
-      </class> <!-- herbalife.testcase.code.NewTest -->
+      </class> <!-- herbalife.testcase.code.NewTest_chrome -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

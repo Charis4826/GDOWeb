@@ -24,7 +24,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.AfterTest;
 
-public class Try {
+public class NewTest {
 	 WebDriver driver;
 	 DesiredCapabilities capabilities;
 	 
@@ -61,30 +61,30 @@ public class Try {
 	  }
 	 
 	 
-  @Test
-  public void open() {
-	  driver.get("http://www.baidu.com");
-      System.out.println("heloo");
-      By inputBox = By.id("kw");
-      By searchButton = By.id("su");
-      //智能等待元素加载出来
-      intelligentWait(driver, 10, inputBox);
-      //智能等待元素加载出来
-      intelligentWait(driver, 10, searchButton);
-      driver.findElement(inputBox).sendKeys("中国地图");
-      driver.findElement(searchButton).click();
-  }
+	 @Test
+	 public void open() {
+		 driver.get("http://www.baidu.com");
+		 System.out.println("heloo");
+		 By inputBox = By.id("kw");
+		 By searchButton = By.id("su");
+		 //智能等待元素加载出来
+		 intelligentWait(driver, 10, inputBox);
+		 //智能等待元素加载出来
+		 intelligentWait(driver, 10, searchButton);
+		 driver.findElement(inputBox).sendKeys("中国地图");
+		 driver.findElement(searchButton).click();
+	 }
  
-@AfterTest
-  public void afterTest() {
-	  try {
-          //等待5秒查看执行效果
-          Thread.sleep(5000);
-      } catch (InterruptedException e) {
-          e.printStackTrace();
-      }
-      driver.quit();
-  }
+	 @AfterTest
+	 public void afterTest() {
+		 try {
+			 //等待5秒查看执行效果
+			 Thread.sleep(5000);
+		 } catch (InterruptedException e) {
+			 e.printStackTrace();
+		 }
+		 driver.quit();
+	 }
   
   /**这是智能等待元素加载的方法*/
   public void intelligentWait(WebDriver driver,int timeOut, final By by) {

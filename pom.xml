@@ -61,6 +61,7 @@
                     </systemPropertyVariables>
                     <suiteXmlFiles>
                         <suiteXmlFile>${xmlFileName}</suiteXmlFile>
+                        <!--此处testng.xml即为要运行的testng.xml文件-->
                     </suiteXmlFiles>
                 </configuration>
             </plugin>

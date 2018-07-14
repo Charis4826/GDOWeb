@@ -48,6 +48,7 @@ public class NewTest {
 	      		ChromeOptions options = new ChromeOptions();
 	      		
 	      		String user = prop.getProperty("user");
+	      		
 	            //通过配置参数进制data;的出现
 	            options.addArguments(
 	          		  "--user-data-dir=C:/Users/"+ user +"/AppData/Local/Google/Chrome/User Data/Default");

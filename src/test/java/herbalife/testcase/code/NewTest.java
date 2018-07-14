@@ -46,9 +46,11 @@ public class NewTest {
 	    	  	capabilities = DesiredCapabilities.chrome();
 	      		capabilities.setBrowserName(browser);
 	      		ChromeOptions options = new ChromeOptions();
+	      		
+	      		String user = prop.getProperty("user");
 	            //通过配置参数进制data;的出现
 	            options.addArguments(
-	          		  "--user-data-dir=C:/Users/Administrator/AppData/Local/Google/Chrome/User Data/Default");
+	          		  "--user-data-dir=C:/Users/"+ user +"/AppData/Local/Google/Chrome/User Data/Default");
 	            //通过配置参数删除“您使用的是不受支持的命令行标记：--ignore-certificate-errors.稳定性和安全性会有所下降。”的提示
 	            options.addArguments("--start-maximized","allow-running-insecure-content","--test-type");
 	            capabilities.setCapability(ChromeOptions.CAPABILITY, options);

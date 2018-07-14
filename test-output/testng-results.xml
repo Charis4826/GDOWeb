@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="59902" started-at="2018-07-13T09:29:36Z" finished-at="2018-07-13T09:30:36Z">
+  <suite name="Suite" duration-ms="53375" started-at="2018-07-13T15:01:54Z" finished-at="2018-07-13T15:02:47Z">
     <groups>
     </groups>
-    <test name="startbyIE" duration-ms="13778" started-at="2018-07-13T09:29:36Z" finished-at="2018-07-13T09:29:50Z">
-      <class name="herbalife.testcase.code.Try">
-        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:herbalife.testcase.code.Try@53b32d7]" name="beforeTest" is-config="true" duration-ms="3432" started-at="2018-07-13T17:29:36Z" finished-at="2018-07-13T17:29:40Z">
+    <test name="startbyIE" duration-ms="12342" started-at="2018-07-13T15:01:54Z" finished-at="2018-07-13T15:02:06Z">
+      <class name="herbalife.testcase.code.NewTest">
+        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:herbalife.testcase.code.NewTest@1bce4f0a]" name="beforeTest" is-config="true" duration-ms="2564" started-at="2018-07-13T23:01:54Z" finished-at="2018-07-13T23:01:56Z">
           <params>
             <param index="0">
               <value>
@@ -18,19 +18,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="open()[pri:0, instance:herbalife.testcase.code.Try@53b32d7]" name="open" duration-ms="3675" started-at="2018-07-13T17:29:40Z" finished-at="2018-07-13T17:29:43Z">
+        <test-method status="PASS" signature="open()[pri:0, instance:herbalife.testcase.code.NewTest@1bce4f0a]" name="open" duration-ms="3797" started-at="2018-07-13T23:01:56Z" finished-at="2018-07-13T23:02:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- open -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:herbalife.testcase.code.Try@53b32d7]" name="afterTest" is-config="true" duration-ms="6652" started-at="2018-07-13T17:29:43Z" finished-at="2018-07-13T17:29:50Z">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:herbalife.testcase.code.NewTest@1bce4f0a]" name="afterTest" is-config="true" duration-ms="5963" started-at="2018-07-13T23:02:00Z" finished-at="2018-07-13T23:02:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- herbalife.testcase.code.Try -->
+      </class> <!-- herbalife.testcase.code.NewTest -->
     </test> <!-- startbyIE -->
-    <test name="startbyChrome" duration-ms="29483" started-at="2018-07-13T09:29:50Z" finished-at="2018-07-13T09:30:19Z">
-      <class name="herbalife.testcase.code.Try">
-        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:herbalife.testcase.code.Try@6e06451e]" name="beforeTest" is-config="true" duration-ms="3573" started-at="2018-07-13T17:29:50Z" finished-at="2018-07-13T17:29:54Z">
+    <test name="startbyChrome" duration-ms="30118" started-at="2018-07-13T15:02:06Z" finished-at="2018-07-13T15:02:36Z">
+      <class name="herbalife.testcase.code.NewTest">
+        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:herbalife.testcase.code.NewTest@59ec2012]" name="beforeTest" is-config="true" duration-ms="3467" started-at="2018-07-13T23:02:06Z" finished-at="2018-07-13T23:02:10Z">
           <params>
             <param index="0">
               <value>
@@ -41,19 +41,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="open()[pri:0, instance:herbalife.testcase.code.Try@6e06451e]" name="open" duration-ms="20070" started-at="2018-07-13T17:29:54Z" finished-at="2018-07-13T17:30:14Z">
+        <test-method status="PASS" signature="open()[pri:0, instance:herbalife.testcase.code.NewTest@59ec2012]" name="open" duration-ms="20702" started-at="2018-07-13T23:02:10Z" finished-at="2018-07-13T23:02:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- open -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:herbalife.testcase.code.Try@6e06451e]" name="afterTest" is-config="true" duration-ms="5837" started-at="2018-07-13T17:30:14Z" finished-at="2018-07-13T17:30:19Z">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:herbalife.testcase.code.NewTest@59ec2012]" name="afterTest" is-config="true" duration-ms="5944" started-at="2018-07-13T23:02:30Z" finished-at="2018-07-13T23:02:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- herbalife.testcase.code.Try -->
+      </class> <!-- herbalife.testcase.code.NewTest -->
     </test> <!-- startbyChrome -->
-    <test name="startbyFirefox" duration-ms="16600" started-at="2018-07-13T09:30:19Z" finished-at="2018-07-13T09:30:36Z">
-      <class name="herbalife.testcase.code.Try">
-        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:herbalife.testcase.code.Try@4566e5bd]" name="beforeTest" is-config="true" duration-ms="9407" started-at="2018-07-13T17:30:19Z" finished-at="2018-07-13T17:30:29Z">
+    <test name="startbyFirefox" duration-ms="10887" started-at="2018-07-13T15:02:36Z" finished-at="2018-07-13T15:02:47Z">
+      <class name="herbalife.testcase.code.NewTest">
+        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:herbalife.testcase.code.NewTest@5700d6b1]" name="beforeTest" is-config="true" duration-ms="4112" started-at="2018-07-13T23:02:36Z" finished-at="2018-07-13T23:02:40Z">
           <params>
             <param index="0">
               <value>
@@ -64,15 +64,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="open()[pri:0, instance:herbalife.testcase.code.Try@4566e5bd]" name="open" duration-ms="1779" started-at="2018-07-13T17:30:29Z" finished-at="2018-07-13T17:30:31Z">
+        <test-method status="PASS" signature="open()[pri:0, instance:herbalife.testcase.code.NewTest@5700d6b1]" name="open" duration-ms="1412" started-at="2018-07-13T23:02:40Z" finished-at="2018-07-13T23:02:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- open -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:herbalife.testcase.code.Try@4566e5bd]" name="afterTest" is-config="true" duration-ms="5408" started-at="2018-07-13T17:30:31Z" finished-at="2018-07-13T17:30:36Z">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:herbalife.testcase.code.NewTest@5700d6b1]" name="afterTest" is-config="true" duration-ms="5356" started-at="2018-07-13T23:02:42Z" finished-at="2018-07-13T23:02:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- herbalife.testcase.code.Try -->
+      </class> <!-- herbalife.testcase.code.NewTest -->
     </test> <!-- startbyFirefox -->
   </suite> <!-- Suite -->
 </testng-results>

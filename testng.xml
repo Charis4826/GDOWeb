@@ -2,13 +2,13 @@
 <suite name="Suite" parallel="false">
 
     <test name="startbyIE">
-    	<parameter name="para" value="parameter_IE.properties" />
+    	<parameter name="para" value="${para}" />
         <classes>
             <class name="herbalife.testcase.code.NewTest"/>
         </classes>
     </test>
 
-   <test name="startbyChrome">
+   <!-- <test name="startbyChrome">
     	<parameter name="para" value="parameter_chrome.properties" />
     
         <classes>
@@ -22,5 +22,5 @@
         <classes>
             <class name="herbalife.testcase.code.NewTest"/>
         </classes>
-    </test>
+    </test> -->
 </suite>

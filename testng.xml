@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Suite" parallel="false">
 
-    <test name="startbyIE">
+    <test name="start">
     	<parameter name="para" value="${para}" />
         <classes>
             <class name="herbalife.testcase.code.NewTest"/>

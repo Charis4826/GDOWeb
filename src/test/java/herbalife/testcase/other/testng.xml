@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="false">
+    <test name="start" preserve-order="true">
+    	<parameter name="para" value="${para}" />
+        <classes>
+            <class name="herbalife.testcase.other.NewTest"/>
+        </classes>
+    </test>
+
+   <!-- <test name="startbyChrome">
+    	<parameter name="para" value="parameter_chrome.properties" />
+    
+        <classes>
+            <class name="herbalife.testcase.code.NewTest"/>
+        </classes>
+    </test>
+    
+    <test name="startbyFirefox">
+    	<parameter name="para" value="parameter_firefox.properties" />
+    
+        <classes>
+            <class name="herbalife.testcase.code.NewTest"/>
+        </classes>
+    </test> -->
+</suite>

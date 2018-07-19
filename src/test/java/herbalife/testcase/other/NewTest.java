@@ -1,4 +1,4 @@
-package herbalife.testcase.code;
+package herbalife.testcase.other;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -30,9 +30,9 @@ public class NewTest {
 	 
 	 @BeforeTest
 	 @Parameters({ "para"})
-	  public void beforeTest(String dbconfig) throws Exception {
+	  public void beforeTest(String para) throws Exception {
 		 Properties prop = new Properties();
-		 prop.load(new FileInputStream(dbconfig));  
+		 prop.load(new FileInputStream(para));  
 		 
 		 String drivertype = prop.getProperty("drivertype");
          String driverdetail = prop.getProperty("driverdetail");
@@ -49,10 +49,8 @@ public class NewTest {
 	      		
 	      		String user = prop.getProperty("user");
 	      		
-	            //Í¨¹ıÅäÖÃ²ÎÊı½øÖÆdata;µÄ³öÏÖ
 	            options.addArguments(
 	          		  "--user-data-dir=C:/Users/"+ user +"/AppData/Local/Google/Chrome/User Data/Default");
-	            //Í¨¹ıÅäÖÃ²ÎÊıÉ¾³ı¡°ÄúÊ¹ÓÃµÄÊÇ²»ÊÜÖ§³ÖµÄÃüÁîĞĞ±ê¼Ç£º--ignore-certificate-errors.ÎÈ¶¨ĞÔºÍ°²È«ĞÔ»áÓĞËùÏÂ½µ¡£¡±µÄÌáÊ¾
 	            options.addArguments("--start-maximized","allow-running-insecure-content","--test-type");
 	            capabilities.setCapability(ChromeOptions.CAPABILITY, options);
 	            driver = new ChromeDriver(capabilities);
@@ -70,18 +68,16 @@ public class NewTest {
 		 System.out.println("heloo");
 		 By inputBox = By.id("kw");
 		 By searchButton = By.id("su");
-		 //ÖÇÄÜµÈ´ıÔªËØ¼ÓÔØ³öÀ´
 		 intelligentWait(driver, 10, inputBox);
-		 //ÖÇÄÜµÈ´ıÔªËØ¼ÓÔØ³öÀ´
 		 intelligentWait(driver, 10, searchButton);
-		 driver.findElement(inputBox).sendKeys("ÖĞ¹úµØÍ¼");
+		 driver.findElement(inputBox).sendKeys("ä¸­å›½åœ°å›¾");
 		 driver.findElement(searchButton).click();
 	 }
  
 	 @AfterTest
 	 public void afterTest() {
 		 try {
-			 //µÈ´ı5Ãë²é¿´Ö´ĞĞĞ§¹û
+			 //ï¿½È´ï¿½5ï¿½ï¿½é¿´Ö´ï¿½ï¿½Ğ§ï¿½ï¿½
 			 Thread.sleep(5000);
 		 } catch (InterruptedException e) {
 			 e.printStackTrace();
@@ -89,7 +85,7 @@ public class NewTest {
 		 driver.quit();
 	 }
   
-  /**ÕâÊÇÖÇÄÜµÈ´ıÔªËØ¼ÓÔØµÄ·½·¨*/
+  /**ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÜµÈ´ï¿½Ôªï¿½Ø¼ï¿½ï¿½ØµÄ·ï¿½ï¿½ï¿½*/
   public void intelligentWait(WebDriver driver,int timeOut, final By by) {
       try {
           (new WebDriverWait(driver, timeOut)).until(new ExpectedCondition<Boolean>(){
@@ -99,7 +95,7 @@ public class NewTest {
               }
           });
       } catch (TimeoutException e) {
-          Assert.fail("³¬Ê±L !! " + timeOut + " ÃëÖ®ºó»¹Ã»ÕÒµ½ÔªËØ [" + by + "]", e);
+          Assert.fail("ï¿½ï¿½Ê±L !! " + timeOut + " ï¿½ï¿½Ö®ï¿½ï¿½Ã»ï¿½Òµï¿½Ôªï¿½ï¿½ [" + by + "]", e);
       }
   }
 

@@ -1,78 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="53375" started-at="2018-07-13T15:01:54Z" finished-at="2018-07-13T15:02:47Z">
+  <suite name="Suite" duration-ms="15269" started-at="2018-07-19T08:18:08Z" finished-at="2018-07-19T08:18:23Z">
     <groups>
     </groups>
-    <test name="startbyIE" duration-ms="12342" started-at="2018-07-13T15:01:54Z" finished-at="2018-07-13T15:02:06Z">
-      <class name="herbalife.testcase.code.NewTest">
-        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:herbalife.testcase.code.NewTest@1bce4f0a]" name="beforeTest" is-config="true" duration-ms="2564" started-at="2018-07-13T23:01:54Z" finished-at="2018-07-13T23:01:56Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[parameter_IE.properties]]>
-              </value>
-            </param>
-          </params>
+    <test name="start" duration-ms="15269" started-at="2018-07-19T08:18:08Z" finished-at="2018-07-19T08:18:23Z">
+      <class name="herbalife.testcase.login.Login">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:herbalife.testcase.login.Login@77cd7a0]" name="beforeTest" is-config="true" duration-ms="7" started-at="2018-07-19T16:18:08Z" finished-at="2018-07-19T16:18:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="open()[pri:0, instance:herbalife.testcase.code.NewTest@1bce4f0a]" name="open" duration-ms="3797" started-at="2018-07-13T23:01:56Z" finished-at="2018-07-13T23:02:00Z">
+        <test-method status="PASS" signature="login()[pri:0, instance:herbalife.testcase.login.Login@77cd7a0]" name="login" duration-ms="15245" started-at="2018-07-19T16:18:08Z" finished-at="2018-07-19T16:18:23Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- open -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:herbalife.testcase.code.NewTest@1bce4f0a]" name="afterTest" is-config="true" duration-ms="5963" started-at="2018-07-13T23:02:00Z" finished-at="2018-07-13T23:02:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-      </class> <!-- herbalife.testcase.code.NewTest -->
-    </test> <!-- startbyIE -->
-    <test name="startbyChrome" duration-ms="30118" started-at="2018-07-13T15:02:06Z" finished-at="2018-07-13T15:02:36Z">
-      <class name="herbalife.testcase.code.NewTest">
-        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:herbalife.testcase.code.NewTest@59ec2012]" name="beforeTest" is-config="true" duration-ms="3467" started-at="2018-07-13T23:02:06Z" finished-at="2018-07-13T23:02:10Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[parameter_chrome.properties]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="open()[pri:0, instance:herbalife.testcase.code.NewTest@59ec2012]" name="open" duration-ms="20702" started-at="2018-07-13T23:02:10Z" finished-at="2018-07-13T23:02:30Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- open -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:herbalife.testcase.code.NewTest@59ec2012]" name="afterTest" is-config="true" duration-ms="5944" started-at="2018-07-13T23:02:30Z" finished-at="2018-07-13T23:02:36Z">
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:herbalife.testcase.login.Login@77cd7a0]" name="afterTest" is-config="true" duration-ms="0" started-at="2018-07-19T16:18:23Z" finished-at="2018-07-19T16:18:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- herbalife.testcase.code.NewTest -->
-    </test> <!-- startbyChrome -->
-    <test name="startbyFirefox" duration-ms="10887" started-at="2018-07-13T15:02:36Z" finished-at="2018-07-13T15:02:47Z">
-      <class name="herbalife.testcase.code.NewTest">
-        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:herbalife.testcase.code.NewTest@5700d6b1]" name="beforeTest" is-config="true" duration-ms="4112" started-at="2018-07-13T23:02:36Z" finished-at="2018-07-13T23:02:40Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[parameter_firefox.properties]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="open()[pri:0, instance:herbalife.testcase.code.NewTest@5700d6b1]" name="open" duration-ms="1412" started-at="2018-07-13T23:02:40Z" finished-at="2018-07-13T23:02:42Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- open -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:herbalife.testcase.code.NewTest@5700d6b1]" name="afterTest" is-config="true" duration-ms="5356" started-at="2018-07-13T23:02:42Z" finished-at="2018-07-13T23:02:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-      </class> <!-- herbalife.testcase.code.NewTest -->
-    </test> <!-- startbyFirefox -->
+      </class> <!-- herbalife.testcase.login.Login -->
+    </test> <!-- start -->
   </suite> <!-- Suite -->
 </testng-results>

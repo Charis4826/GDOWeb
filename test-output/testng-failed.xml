@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]">
-  <parameter name="para" value="parameter_firefox.properties"/>
-  <test name="startbyChrome(failed)">
-    <parameter name="para" value="parameter_chrome.properties"/>
+  <test name="start(failed)">
     <classes>
-      <class name="herbalife.testcase.code.NewTest">
+      <class name="herbalife.testcase.login.Login">
         <methods>
+          <include name="login"/>
           <include name="beforeTest"/>
-          <include name="beforeTest"/>
-          <include name="beforeTest"/>
-          <include name="open"/>
-          <include name="afterTest"/>
           <include name="afterTest"/>
         </methods>
-      </class> <!-- herbalife.testcase.code.NewTest -->
+      </class> <!-- herbalife.testcase.login.Login -->
     </classes>
-  </test> <!-- startbyChrome(failed) -->
+  </test> <!-- start(failed) -->
 </suite> <!-- Failed suite [Suite] -->

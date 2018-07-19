@@ -89,17 +89,17 @@ public class Baseclass extends BaseClassFinder {
 		Baseclass.openbrowser(browser,url);
 		Baseclass.wait(2);
 		Baseclass.maxwindow();
-		/*Baseclass.sendkeys("username", username);
+		Baseclass.sendkeys("username", username);
 		Baseclass.sendkeys("pwd", pwd);
 		Baseclass.click("loginbtn");
-		Baseclass.log("，input：" + url);
-		Baseclass.log("登陆账号为:" + username + " " + "登陆密码为:" + pwd);*/
+		Baseclass.log("打开url" + url);
+		Baseclass.log("登陆账号为:" + username + " " + "登陆密码为:" + pwd);
 	}
 
 	// if form parameter is not null,input data and use this method;
-	public static void closebrowser(String BrowserType) {
-		if (BrowserType != null) {
-			if (BrowserType.equals("c")) {
+	public static void closebrowser(String Browser) {
+		if (Browser != null) {
+			if (Browser.toUpperCase().equals("CHROME")) {
 				try {
 					Runtime.getRuntime().exec("taskkill /F /IM chrome.exe");
 					driver.close();
@@ -107,28 +107,14 @@ public class Baseclass extends BaseClassFinder {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-			} else if (BrowserType.equals("i")) {
+			} else if (Browser.toUpperCase().equals("IE")) {
 				try {
 					Runtime.getRuntime().exec("taskkill /F /IM iexplorer.exe");
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-			} else if (BrowserType.equals("o")) {
-				try {
-					Runtime.getRuntime().exec("taskkill /F /IM opera.exe");
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			} else if (BrowserType.equals("s")) {
-				try {
-					Runtime.getRuntime().exec("taskkill /F /IM safari.exe");
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			} else {
+			} else if (Browser.toUpperCase().equals("FIREFOX"))  {
 				try {
 					Runtime.getRuntime().exec("taskkill /F /IM firefox.exe");
 				} catch (IOException e) {

@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="15269" started-at="2018-07-19T08:18:08Z" finished-at="2018-07-19T08:18:23Z">
+  <suite name="Suite" duration-ms="24799" started-at="2018-07-19T09:37:54Z" finished-at="2018-07-19T09:38:18Z">
     <groups>
     </groups>
-    <test name="start" duration-ms="15269" started-at="2018-07-19T08:18:08Z" finished-at="2018-07-19T08:18:23Z">
+    <test name="start" duration-ms="24799" started-at="2018-07-19T09:37:54Z" finished-at="2018-07-19T09:38:18Z">
       <class name="herbalife.testcase.login.Login">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:herbalife.testcase.login.Login@77cd7a0]" name="beforeTest" is-config="true" duration-ms="7" started-at="2018-07-19T16:18:08Z" finished-at="2018-07-19T16:18:08Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:herbalife.testcase.login.Login@77cd7a0]" name="beforeTest" is-config="true" duration-ms="11" started-at="2018-07-19T17:37:54Z" finished-at="2018-07-19T17:37:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="login()[pri:0, instance:herbalife.testcase.login.Login@77cd7a0]" name="login" duration-ms="15245" started-at="2018-07-19T16:18:08Z" finished-at="2018-07-19T16:18:23Z">
+        <test-method status="PASS" signature="login()[pri:0, instance:herbalife.testcase.login.Login@77cd7a0]" name="login" duration-ms="24770" started-at="2018-07-19T17:37:54Z" finished-at="2018-07-19T17:38:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:herbalife.testcase.login.Login@77cd7a0]" name="afterTest" is-config="true" duration-ms="0" started-at="2018-07-19T16:18:23Z" finished-at="2018-07-19T16:18:23Z">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:herbalife.testcase.login.Login@77cd7a0]" name="afterTest" is-config="true" duration-ms="0" started-at="2018-07-19T17:38:18Z" finished-at="2018-07-19T17:38:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->

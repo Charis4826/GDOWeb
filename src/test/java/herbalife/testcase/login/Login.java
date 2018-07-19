@@ -20,7 +20,6 @@ public class Login {
 	@Test
 	public void login() throws Exception {
 		Baseclass.login(rc.getValue("browser"),rc.getValue("url"), rc.getValue("username"),rc.getValue("pwd"));
-		
 	}
 
 

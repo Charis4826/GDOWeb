@@ -13,20 +13,20 @@ import java.util.List;
 
 public class Locator {
 
-	private String yamlFile;
+	Configuration rc = new Configuration(Configuration.getFilePath());
+	private String yamlFile= rc.getValue("yamlName");
 	public WebDriver driver;
-
-/*	public Locator() {
+	
+	public Locator() {
 		driver = Baseclass.getDriver();
-		yamlFile = "nc";
 		this.getYamlFile();
 	}
-*/
+
 	private HashMap<String, HashMap<String, String>> ml;
 
 	@SuppressWarnings("unchecked")
 	public void getYamlFile() {
-		File f = new File("src/test/resources/" + yamlFile + ".yaml");
+		File f = new File(yamlFile + ".yaml");
 		try {
 			ml = Yaml.loadType(new FileInputStream(f.getAbsolutePath()), HashMap.class);
 		} catch (FileNotFoundException e) {

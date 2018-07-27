@@ -14,9 +14,9 @@ import java.util.List;
 public class Locator {
 
 	Configuration rc = new Configuration(Configuration.getFilePath());
-	private String yamlFile= rc.getValue("yamlName");
+	private String yamlFile = rc.getValue("yamlName");
 	public WebDriver driver;
-	
+
 	public Locator() {
 		driver = Baseclass.getDriver();
 		this.getYamlFile();

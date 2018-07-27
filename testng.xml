@@ -2,7 +2,7 @@
 <suite name="Suite" parallel="false">
     <test name="start">
         <classes>
-            <class name="herbalife.testcase.login.Login"/>
+            <class name="herbalife.testcase.buy.RSO_1"/>
         </classes>
     </test>
 </suite>

@@ -30,6 +30,7 @@ public class Baseclass extends BaseClassFinder {
 	public static WebDriver driver;
 	public static String currentWindow;
 	public static DesiredCapabilities capabilities;
+	public static Configuration rc = new Configuration(Configuration.getFilePath());
 
 	public static WebDriver getDriver() {
 		return driver;
@@ -40,37 +41,38 @@ public class Baseclass extends BaseClassFinder {
 		return info;
 	}
 
-	public static void openbrowser(String browser,String url) {
+	public static void openbrowser(String browser, String url) {
 		String userDir = System.getProperty("user.dir");
-		
+
 		if (browser.toUpperCase().equals("IE")) {
-			File file = new File(userDir+"/src/main/resources/IEDriverServer.exe");
+			File file = new File(userDir + "/src/main/resources/IEDriverServer.exe");
 			System.setProperty("webdriver.ie.driver", file.getAbsolutePath());
-			
+
 			driver = new InternetExplorerDriver();
 		} else if (browser.toUpperCase().equals("CHROME")) {
-			
-			File file = new File(userDir+"/src/main/resources/chromedriver2.29.461591.exe");
+
+			File file = new File(userDir + "/src/main/resources/chromedriver2.29.461591.exe");
 			System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
-			
+
 			capabilities = DesiredCapabilities.chrome();
 			capabilities.setBrowserName(browser);
 			ChromeOptions options = new ChromeOptions();
 
-			options.addArguments("--user-data-dir=C:/Users/Administrator/AppData/Local/Google/Chrome/User Data/Default");
+			options.addArguments(
+					"--user-data-dir=C:/Users/Administrator/AppData/Local/Google/Chrome/User Data/Default");
 			options.addArguments("--start-maximized", "allow-running-insecure-content", "--test-type");
 			capabilities.setCapability(ChromeOptions.CAPABILITY, options);
-			
+
 			driver = new ChromeDriver(capabilities);
 		} else if (browser.toUpperCase().equals("FIREFOX")) {
-			File file = new File(userDir+"/src/main/resources/geckodriver.exe");
+			File file = new File(userDir + "/src/main/resources/geckodriver.exe");
 			System.setProperty("webdriver.gecko.driver", file.getAbsolutePath());
-			
+
 			driver = new FirefoxDriver();
 		}
-		
+
 		driver.get(url);
-		Baseclass.log("open browser:" + browser +" and input testURL:" + url);
+		Baseclass.log("open browser:" + browser + " and input testURL:" + url);
 	}
 
 	// opration the windows max
@@ -85,8 +87,8 @@ public class Baseclass extends BaseClassFinder {
 		Baseclass.log("refresh the windows");
 	}
 
-	public static void login(String browser,String url, String username, String pwd) throws InterruptedException {
-		Baseclass.openbrowser(browser,url);
+	public static void login(String browser, String url, String username, String pwd) throws InterruptedException {
+		Baseclass.openbrowser(browser, url);
 		Baseclass.wait(2);
 		Baseclass.maxwindow();
 		Baseclass.sendkeys("username", username);
@@ -96,8 +98,8 @@ public class Baseclass extends BaseClassFinder {
 		Baseclass.log("登陆账号为:" + username + " " + "登陆密码为:" + pwd);
 	}
 
-	// if form parameter is not null,input data and use this method;
-	public static void closebrowser(String Browser) {
+	public static void closebrowser() {
+		String Browser = rc.getValue("browser");
 		if (Browser != null) {
 			if (Browser.toUpperCase().equals("CHROME")) {
 				try {
@@ -114,7 +116,7 @@ public class Baseclass extends BaseClassFinder {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-			} else if (Browser.toUpperCase().equals("FIREFOX"))  {
+			} else if (Browser.toUpperCase().equals("FIREFOX")) {
 				try {
 					Runtime.getRuntime().exec("taskkill /F /IM firefox.exe");
 				} catch (IOException e) {
@@ -123,16 +125,6 @@ public class Baseclass extends BaseClassFinder {
 				}
 			}
 
-		}
-	}
-
-	// if form parameter is null,use this method;
-	public static void closebrowser() {
-		try {
-			Runtime.getRuntime().exec("taskkill /F /IM firefox.exe");
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		}
 	}
 

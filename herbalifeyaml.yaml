@@ -7,24 +7,7 @@ pwd:
 loginbtn:
   type:id
   value:loginButton
-CheckUser:
-  type:xpath
-  value:"/html/body/app/main-sidebar/section/div/div/h4"
-SignoutBar:
-  type:xpath
-  value:"/html/body/app/header/nav/div/ul/li[1]/a/span"
-Logoutbtn:
-  type:xpath
-  value:"/html/body/app/header/nav/div/ul/li[1]/ul/li/a"
-LogoutConfirm:
-  type:xpath
-  value:"//*[@id=\"signoutDialog\"]/div/div/div[3]/button[2]"
-CheckLogout:
-  type:xpath
-  value:"/html/body/div/div[2]/h2"
-TemplateManagement:
-  type:xpath
-  value:"/html/body/app/main-sidebar/section/ul/li[7]/a/span"
-SMSTemplate:
-  type:xpath
-  value:"//*[@id=\"10\"]"
+logoutbtn:
+  type:id
+  value:_LoginView1_LogonStatusView1__LogonStatus
+

@@ -16,6 +16,7 @@ public class Logout {
 
 		// Logout
 		try {
+			Baseclass.intelligentWait(10, "logoutbtn");
 			Baseclass.click("logoutbtn");
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block

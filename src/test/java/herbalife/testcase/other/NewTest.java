@@ -85,18 +85,18 @@ public class NewTest {
 		 driver.quit();
 	 }
   
-  /**�������ܵȴ�Ԫ�ؼ��صķ���*/
-  public void intelligentWait(WebDriver driver,int timeOut, final By by) {
-      try {
-          (new WebDriverWait(driver, timeOut)).until(new ExpectedCondition<Boolean>(){
-              public Boolean apply(WebDriver driver) {
-                  WebElement element = driver.findElement(by);
-                  return element.isDisplayed();
-              }
-          });
-      } catch (TimeoutException e) {
-          Assert.fail("��ʱL !! " + timeOut + " ��֮��û�ҵ�Ԫ�� [" + by + "]", e);
-      }
-  }
+	 /**这是智能等待元素加载的方法*/
+	    public void intelligentWait(WebDriver driver,int timeOut, final By by) {
+	        try {
+	            (new WebDriverWait(driver, timeOut)).until(new ExpectedCondition<Boolean>(){
+	                public Boolean apply(WebDriver driver) {
+	                    WebElement element = driver.findElement(by);
+	                    return element.isDisplayed();
+	                }
+	            });
+	        } catch (TimeoutException e) {
+	            Assert.fail("超时L !! " + timeOut + " 秒之后还没找到元素 [" + by + "]", e);
+	        }
+	    }
 
 }

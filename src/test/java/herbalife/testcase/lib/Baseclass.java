@@ -13,6 +13,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.NoSuchWindowException;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -21,7 +22,10 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.internal.BaseClassFinder;
 
@@ -128,6 +132,24 @@ public class Baseclass extends BaseClassFinder {
 		}
 	}
 
+	public static void click(String key) throws InterruptedException {
+		Locator Locate = new Locator();
+		WebElement element = Locate.getElement(key);
+		if (element.getText() != null && !"".equals(element.getText())) {
+			String text = element.getText();
+			Thread.sleep(1000);
+			System.out.println("execute click operation:");
+			System.out.println("click" + " " + text);
+		} else if ("".equals(element.getText())) {
+			Thread.sleep(1000);
+			System.out.println("execute click operation");
+			System.out.println("click" + " " + key);
+		} else {
+			System.out.println("this Element is not found text");
+		}
+		element.click();
+	}
+	
 	public static void switchToIframe(String key) {
 		Locator Locate = new Locator();
 		WebElement element = Locate.getElement(key);
@@ -173,24 +195,7 @@ public class Baseclass extends BaseClassFinder {
 	 * System.out.println("this Element is not found text"); } element.click();} }
 	 */
 
-	public static void click(String key) throws InterruptedException {
-		Locator Locate = new Locator();
-		WebElement element = Locate.getElement(key);
-		String text = element.getText();
-		if (element.getText() != null && !"".equals(element.getText())) {
-			text = element.getText();
-			Thread.sleep(1000);
-			System.out.println("execute click operation");
-			System.out.println("click" + " " + text);
-		} else if ("".equals(element.getText())) {
-			Thread.sleep(1000);
-			System.out.println("execute click operation");
-			System.out.println("click" + " " + key);
-		} else {
-			System.out.println("this Element is not found text");
-		}
-		element.click();
-	}
+
 
 	public static void confirmDialog() throws InterruptedException {
 		Alert confirmDialog = driver.switchTo().alert();
@@ -299,6 +304,22 @@ public class Baseclass extends BaseClassFinder {
 			return false;
 		}
 	}
+	
+	 /**这是智能等待元素加载的方法*/
+    public static void intelligentWait(int timeOut, final String key) {
+    	Locator Locate = new Locator();
+		
+        try {
+            (new WebDriverWait(driver, timeOut)).until(new ExpectedCondition<Boolean>(){
+                public Boolean apply(WebDriver driver) {
+                	WebElement element = Locate.getElement(key);
+                    return element.isDisplayed();
+                }
+            });
+        } catch (TimeoutException e) {
+            Assert.fail("超时L !! " + timeOut + " 秒之后还没找到元素 [" + key + "]", e);
+        }
+    }
 
 	// 获得某元素的文本描述信息
 	public static String getWebText(String key) {

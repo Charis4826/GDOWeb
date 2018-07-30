@@ -1,7 +1,6 @@
 package herbalife.testcase.buy;
 
 import org.testng.annotations.*;
-import herbalife.testcase.lib.Configuration;
 import herbalife.testcase.login.Login;
 import herbalife.testcase.login.Logout;
 

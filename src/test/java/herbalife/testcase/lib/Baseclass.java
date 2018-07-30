@@ -34,7 +34,7 @@ public class Baseclass extends BaseClassFinder {
 	public static WebDriver driver;
 	public static String currentWindow;
 	public static DesiredCapabilities capabilities;
-	public static Configuration rc = new Configuration(Configuration.getFilePath());
+	public static Configuration rc = myConfigHelper.getConfig();
 
 	public static WebDriver getDriver() {
 		return driver;
@@ -98,7 +98,6 @@ public class Baseclass extends BaseClassFinder {
 		Baseclass.sendkeys("username", username);
 		Baseclass.sendkeys("pwd", pwd);
 		Baseclass.click("loginbtn");
-		Baseclass.log("打开url" + url);
 		Baseclass.log("登陆账号为:" + username + " " + "登陆密码为:" + pwd);
 	}
 
@@ -171,8 +170,6 @@ public class Baseclass extends BaseClassFinder {
 
 	// find element and set the value
 	public static void sendkeys(String key, String str) throws InterruptedException {
-		// String text;
-		// text=driver.findElement(by).getText();
 		Locator Locate = new Locator();
 		WebElement element = Locate.getElement(key);
 		element.clear();

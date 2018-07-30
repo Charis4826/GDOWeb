@@ -22,9 +22,9 @@ public class Configuration {
 
 	public static String getFilePath() {
 		String userDir = System.getProperty("user.dir");
-		System.out.print(userDir);
-		filePath = userDir + "/herbalife.properties";
-		// System.out.println(filePath);
+		System.out.println(userDir);
+		filePath = userDir + "\\herbalife.properties";
+		System.out.println("load config file:" + filePath);
 		return filePath;
 	}
 
@@ -147,13 +147,4 @@ public class Configuration {
 		}
 	}// end saveFile(...)
 
-	// @Parameters("env")
-	public static void main(String[] args) {
-		System.out.println(Configuration.class.getResource(""));
-		System.out.println(Configuration.class.getResource("/"));
-		System.out.println(Configuration.class.getResource("herbalife.properties"));
-		Configuration rc = new Configuration(Configuration.getFilePath());
-		String url = rc.getValue("url");// 以下读取properties文件的值
-		System.out.println(url);// 以下输出properties读出的值
-	}
 }

@@ -6,7 +6,6 @@ import herbalife.testcase.login.Login;
 import herbalife.testcase.login.Logout;
 
 public class RSO_1 {
-	Configuration rc = new Configuration(Configuration.getFilePath());
 
 	@Test
 	public void f() {

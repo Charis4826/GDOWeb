@@ -10,7 +10,7 @@ import org.testng.annotations.AfterTest;
 
 public class Login {
 
-	Configuration rc = new Configuration(Configuration.getFilePath());
+	Configuration rc = myConfigHelper.getConfig();
 	/*
 	 * @DataProvider(name = "TestData") public static Object[][] getLoginData()
 	 * throws IOException { Object[][] obj = TestData.getTestData("data/", "nc.xls",

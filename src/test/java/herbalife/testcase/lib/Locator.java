@@ -13,7 +13,7 @@ import java.util.List;
 
 public class Locator {
 
-	Configuration rc = new Configuration(Configuration.getFilePath());
+	Configuration rc = myConfigHelper.getConfig();
 	private String yamlFile = rc.getValue("yamlName");
 	public WebDriver driver;
 

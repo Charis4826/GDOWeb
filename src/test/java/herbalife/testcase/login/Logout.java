@@ -4,13 +4,12 @@ import org.testng.annotations.Test;
 
 import herbalife.testcase.lib.Baseclass;
 import herbalife.testcase.lib.Configuration;
+import herbalife.testcase.lib.myConfigHelper;
 
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.AfterTest;
 
 public class Logout {
-	Configuration rc = new Configuration(Configuration.getFilePath());
-
 	@Test
 	public void logout() {
 

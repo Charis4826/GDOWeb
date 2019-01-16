@@ -2,8 +2,8 @@
 <suite name="Suite" parallel="false">
     <test name="start">
         <classes>
-            <!-- <class name="herbalife.callapi.GetToken"/> -->
-            <class name="herbalife.callapi.GetMobileStatisticInfo"/>
+            <class name="herbalife.callapi.GetToken"/>
+            <!-- <class name="herbalife.callapi.GetMobileStatisticInfo"/> -->
             <!-- <class name="herbalife.testcase.buy.RSO_1"/> -->
         </classes>
     </test>

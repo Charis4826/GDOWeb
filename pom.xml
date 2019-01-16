@@ -97,9 +97,9 @@
 		</dependency>
 
 		<dependency>
-			<groupId>com.squareup.okhttp3</groupId>
-			<artifactId>okhttp</artifactId>
-			<version>3.8.1</version>
+  			<groupId>com.squareup.okhttp3</groupId>
+  			<artifactId>okhttp</artifactId>
+  			<version>3.3.0</version>
 		</dependency>
 
 		<dependency>

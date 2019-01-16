@@ -4,21 +4,24 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class MobileStatisticInfo {
-	private UserCountInfoPayload data;
+public class Inventory {
+	private InventoryPayload data;
 	
 	@JsonProperty("isSuccess")
 	private boolean isSuccess;
-	
-	public UserCountInfoPayload getData() {
+
+	public InventoryPayload getData() {
 		return data;
 	}
-	public void setData(UserCountInfoPayload data) {
+
+	public void setData(InventoryPayload data) {
 		this.data = data;
 	}
+
 	public boolean isSuccess() {
 		return isSuccess;
 	}
+
 	public void setSuccess(boolean isSuccess) {
 		this.isSuccess = isSuccess;
 	}

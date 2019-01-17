@@ -5,8 +5,10 @@ import java.util.List;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown=true)
-public class AuthResponse {
+public class AuthResponse extends RestResponseWrapper<AuthResponse.AuthResponsePayload>{
 	
+	@JsonIgnoreProperties(ignoreUnknown=true)
+    public static class AuthResponsePayload{
 		private String token;
 		private MemberShip membership;
 		private VolumeData volumeData;
@@ -43,5 +45,5 @@ public class AuthResponse {
 		public void setNotifications(List<Notification> notifications) {
 			this.notifications = notifications;
 		}
-
+    }
 }

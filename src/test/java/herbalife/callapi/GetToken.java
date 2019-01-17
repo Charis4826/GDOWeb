@@ -3,7 +3,7 @@ package herbalife.callapi;
 import org.testng.annotations.Test;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
-import herbalife.modules.AuthResponsePayload;
+import herbalife.modules.AuthResponse;
 import herbalife.testcase.lib.*;
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
@@ -61,10 +61,10 @@ public class GetToken {
 				String test=response.body().string();
 				
 				Gson gson = new Gson();
-				AuthResponsePayload ar = gson.fromJson(test, AuthResponsePayload.class);
+				AuthResponse ar = gson.fromJson(test, AuthResponse.class);
 				
 				/*ObjectMapper mapper= new ObjectMapper();
-				AuthResponsePayload ar= mapper.readValue(test,  AuthResponsePayload.class);*/				
+				AuthResponse ar= mapper.readValue(test,  AuthResponse.class);*/				
 				
 				System.out.println(ar.getData().getToken());
 				

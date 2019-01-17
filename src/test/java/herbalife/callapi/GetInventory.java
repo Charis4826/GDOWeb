@@ -1,10 +1,8 @@
 package herbalife.callapi;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import com.fasterxml.jackson.databind.ObjectMapper;
-
-import herbalife.callapi.GetMobileStatisticInfo.MyLock;
 import herbalife.modules.Inventory;
 import herbalife.testcase.lib.Configuration;
 import herbalife.testcase.lib.myConfigHelper;
@@ -47,14 +45,15 @@ public class GetInventory {
 				
 				System.out.println(test);
 				
-			/*	Gson gson = new Gson();
-				MobileStatisticInfo ar = gson.fromJson(test, MobileStatisticInfo.class);
-				*/
+				/*Gson gson = new Gson();
+				MobileStatisticInfo ar = gson.fromJson(test, MobileStatisticInfo.class);*/
+				
 				ObjectMapper mapper= new ObjectMapper();
 				Inventory ar= mapper.readValue(test,  Inventory.class);
 				
-				System.out.println(ar.getData().getInventoryData().getProductData());
-				
+				String testdata = ar.getData().getProducts().get(0).getSKU();
+				System.out.println(testdata);
+				Assert.assertEquals("022U", testdata);
 			}
 
 		} catch (Exception e) {

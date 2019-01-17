@@ -1,17 +1,21 @@
 package herbalife.modules;
 
+import java.util.List;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class InventoryPayload {
-	private InventoryData inventoryData;
+	private List<ProductData> products;
 
-	public InventoryData getInventoryData() {
-		return inventoryData;
+	public List<ProductData> getProducts() {
+		return products;
 	}
 
-	public void setInventoryData(InventoryData inventoryData) {
-		this.inventoryData = inventoryData;
+	public void setProducts(List<ProductData> products) {
+		this.products = products;
 	}
+
+	 
 	
 }

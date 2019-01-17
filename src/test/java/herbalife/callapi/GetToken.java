@@ -16,7 +16,9 @@ public class GetToken {
 	public Configuration rc = myConfigHelper.getConfig();
 
 	@Test
-	public void getTokenByLogin() {
+	public String getTokenByLogin() {
+		String token = null;
+		
 		String locale = rc.getValue("locale");
 		String username = rc.getValue("username");
 		String pwd = rc.getValue("pwd");
@@ -66,14 +68,15 @@ public class GetToken {
 				/*ObjectMapper mapper= new ObjectMapper();
 				AuthResponse ar= mapper.readValue(test,  AuthResponse.class);*/				
 				
-				System.out.println(ar.getData().getToken());
+				token = ar.getData().getToken();
+				System.out.println("token:" + token);
 				
 			}
 
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
-
+		return token;
 	}
 
 	public class MyLock {

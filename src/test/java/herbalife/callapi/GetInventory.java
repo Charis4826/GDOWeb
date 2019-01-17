@@ -18,10 +18,15 @@ public class GetInventory {
 	public void getInventory() {
 		String locale = rc.getValue("locale");
 		String username = rc.getValue("username");
-		String token = rc.getValue("token");
+		String token = null;
 		
 		String strUrl = rc.getValue("url") + "Ordering/V6/"+ username +"/Inventory/%E5%8C%97%E4%BA%AC/%E5%8C%97%E4%BA%AC%E5%B8%82";
 
+		if (token==null||token.equals("")) {
+			GetToken gettoken = new GetToken();
+			token = gettoken.getTokenByLogin();
+		}
+		
 		try {
 
 			OkHttpClient okHttpClient = new OkHttpClient();
